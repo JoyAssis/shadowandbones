@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Link} from 'react-router-dom'
 import Main from "../pages/Main"
 import Serie from "../pages/Serie"
 import Logo from "../assets/logo.png"
+import Cast from "../pages/Cast"
 
 import * as S from "../styles/Styles"
 import styled from "styled-components";
@@ -28,7 +29,10 @@ function HeaderNav(){
           <Links to="/">Inicio</Links>
         </li>
         <li>
-          <Links to="serie">A Serie</Links>
+          <Links to="serie">A Série</Links>
+        </li>
+        <li>
+          <Links to="cast">Personagens</Links>
         </li>
       </ul>
     </S.Nav> 
@@ -37,6 +41,7 @@ function HeaderNav(){
     <Routes>
       <Route path="/" element={<Main/>} />
       <Route path="serie" element={<Serie/>} />
+      <Route path="cast" element={<Cast/>} />
     </Routes>
     
     </BrowserRouter>

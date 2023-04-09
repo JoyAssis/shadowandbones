@@ -1,5 +1,4 @@
 import styled, { createGlobalStyle } from "styled-components";
-import Bg from "../assets/bg.jpg"
 
 export const GlobalStyle = createGlobalStyle`
 *{
@@ -13,23 +12,20 @@ export const GlobalStyle = createGlobalStyle`
 export const Header = styled.header`
   width: 100%;
   height: 15vh;
-  border: red solid;
   display: flex;
   justify-content: space-between;
-  background-image: url(${Bg})
+  border-bottom: 1px solid #A5A972;
 `;
 export const Logo = styled.div`
   width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: red solid;
   img {
     height: 10vh;
   }
 `;
 export const Nav = styled.nav`
-  border: red solid;
   width: 60%;
   display: flex;
   justify-content: center;
@@ -40,7 +36,6 @@ export const Nav = styled.nav`
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    border: red solid;
     
     li{
       width:7vw;
@@ -50,8 +45,12 @@ export const Nav = styled.nav`
       letter-spacing:2px;
       text-transform:uppercase;
       :hover{
-        text-shadow:3px 3px 10px #E5D09A;
+        text-shadow:10px 10px 10px #AEE4C2;
         transition: 1s;
+      }
+      @media(max-width:768px){
+        width:15vw;
+        font-size:1em;
       }
     }
   }
@@ -60,12 +59,72 @@ export const Nav = styled.nav`
 export const Main = styled.main`
 width:100%;
 height: 80vh;
-color: #fff;
+color: #E5D09A;
 font-size:2rem;
+display:flex;
+justify-content: flex-end;
+align-items: flex-end;
+font-family: 'Allerta', sans-serif;
 div{
-  border: solid red;
   width: 50%;
   height: 50vh;
+  padding-right:5em;
+  @media(max-width:768px){
+    width: 100%;
+    height: 70vh;
+    padding-right:0;
+    text-align:center;
+  }
 }
+`
+//serie
+export const Serie = styled.section`
+width:100%;
+height: 85vh;
+color: #E5D09A;
+font-size:1.5rem;
+display:flex;
+justify-content: flex-end;
+align-items: flex-end;
+font-family: 'Allerta', sans-serif;
+background-color: rgba(33, 33, 34, 0.65);
+@media(max-width:768px){
+  justify-content: center;
+  font-size:1.2em;
+}
+
+div{
+  width: 50%;
+  height: 80vh;
+  padding-right:5em;
+  text-align:right;
+  @media(max-width:768px){
+    width:100%;
+    padding-right:1em;
+    padding-left:1em;
+  }
+  
+  p{
+    padding-bottom:2em;
+  }
+}
+`
+//personagens
+export const Cast = styled.section`
+width:100%;
+height:85vh;
+display:flex;
+justify-content:flex-end;
+align-items:end;
+`
+export const Figure = styled.figure`
+  width:50vw;
+ img{
+  width:100%;
+  border-bottom: 5px solid #A5A972;
+ }
+ @media(max-width:768px){
+  display:none;
+ }
 `
 
